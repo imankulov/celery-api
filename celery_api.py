@@ -2,6 +2,15 @@
 """
 Celery API discovery module.
 """
+from celery import Celery
+
+
+def make_api(*args, **kwargs):
+    """
+    Little shortcut for api discovery
+    """
+    celery = Celery(*args, **kwargs)
+    return CeleryApi(celery)
 
 
 class CeleryApi(object):
