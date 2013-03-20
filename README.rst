@@ -38,3 +38,8 @@ API and work with it the following way:
     Ensure that workers are up and available from clients for inspection.
     You may re-discover your installation after object creation by executing
     ``api._discover()``.
+
+.. note::
+    If you can't launch the task and get a NotRegistered exception instead,
+    it's most likely you have the ``CELERY_ALWAYS_EAGER`` config option set to
+    ``True``.
